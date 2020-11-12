@@ -1,0 +1,71 @@
+CREATE TABLE Sportsmen (
+  Id INTEGER PRIMARY KEY,
+  FirstName TEXT,
+  LastName TEXT,
+  Patronymic TEXT,
+  Age INTEGER,
+  Country TEXT,
+  YearOfOlimpiad INTEGER,
+  KindOfSport TEXT,
+  Place INTEGER,
+  Dope TEXT
+  );
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (1, 'Дмитрий', 'Василенко', 'Андреевич', 44, 'Россия', 1996, 'Гимнастика спортивная', 1, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (2, ' Peter', 'Vidmar', NULL, 44, 'США', 1984, 'Гимнастика спортивная', 1, 'Да');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (3, 'Ютака', ' Айхара', NULL, 49, 'Япония', 1992, 'Гимнастика спортивная', 3, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (4, 'Симона', ' Аманар', NULL, 40, 'Румыния', 1996, 'Гимнастика спортивная', 3, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (5, 'Марина', 'Остапова', 'Юрьевна', 35, 'Украина', 2000, 'Плавание', 2, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (6, 'Карина', 'Рубинова', 'Сергеевна', 34, 'Беларусь', 2004, 'Плавание', 1, 'Да');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (7, 'Игорь', 'Бондаренко', 'Олегович', 38, 'Россия', 2000, 'Плавание', 1, 'Да');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (8, 'Джон', 'Стюард', 25, 'США', 2012, 'Плавание', 2, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (9, 'Конрад', 'Беккер', 22, 'Германия', 2016, 'Плавание', 1, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (10, 'Питер', 'Вандеркай', 30, 'США', 2016, 'Плавание', 3, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (11, 'Ольга', 'Майоренко', 'Александровна', 24, 'Россия', 2016, 'Плавание', 2, 'Да');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (12, 'Фелисити', 'Галвес', 23, 'Австралия', 2016, 'Плавание', 2, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Patronymic, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (13, 'Андрей', 'Кузнецов', 'Владимирович', 24, 'Россия', 2016, 'Прыжки в воду', 3, 'Да');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (14, 'Кай', 'Куин', 21, 'Китай', 2016, 'Прыжки в воду', 1, 'Нет');
+
+INSERT INTO Sportsmen (Id, FirstName, LastName, Age, Country, YearOfOlimpiad, KindOfSport, Place, Dope)
+VALUES (15, 'Эмили', 'Хейманс', 36, 'Канада', 2012, 'Прыжки в воду', 2, 'Нет');
+
+SELECT * FROM Sportsmen 
+WHERE Sportsmen.Age > 25
+ORDER BY Age ASC;
+
+SELECT * From Sportsmen 
+WHERE Sportsmen.Country = 'Россия' AND Sportsmen.Dope = 'Да';
+
+UPDATE Sportsmen
+Set KindOfSport = 'Прыжки на батуте'
+WHERE Sportsmen.KindOfSport = 'Прыжки в воду';
+
+DELETE FROM Sportsmen
+WHERE Sportsmen.Country = 'США';
